@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #parent p:first-child {
+    color: green;
+    text-decoration: underline;
+    font-size:15px;
+}
+
+#parent p:nth-child(2){
+    color: gray;
+    text-decoration:line-through;
+    font-size:25px;
+}
+
+#parent p:nth-child(3){
+    color: orange;
+    text-decoration: underline;
+    font-size:35px;
+}
+
+#parent p:last-child {
+    color: blue;
+    text-decoration: overline;
+    font-size:45px;
+}
+
+#parent_one p:nth-child(even) {
+    color:#bb33ff;
+    text-decoration: overline;
+    font-size:33px;
+}
+
+#parent_one p:nth-child(odd) {
+    color: #004080;
+    text-decoration:line-through;
+    font-size:45px;
+}
+
+
+hr{
+    border: none;
+    height: 10px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
+
+http
+        </style>
+        <title>Page Title</title>
+    </head>
+    <body>
+      <div id="parent">
+    <p>First child</p>
+    <p>Second child</p>
+    <p>Third child</p>
+    <p>Fourth child</p>
+</div>
+
+<hr/>
+
+<div id="parent_one">
+    <p>First odd child</p>
+    <p>First even child</p>
+    <p>Second odd child</p>
+    <p>Second even child</p>
+</div>
+    </body>
+</html>

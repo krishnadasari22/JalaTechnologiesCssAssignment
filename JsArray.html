@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Sort an Array of Objects</title>
+</head>
+<body>
+    <script>
+    var persons = [
+        { name: "Harry", age: 14 },
+        { name: "Ethan", age: 30 },
+        { name: "Peter", age: 21 },
+        { name: "Clark", age: 42 },
+        { name: "Alice", age: 16 }
+    ];
+    
+    // Sort by age
+    persons.sort(function (a, b) {
+        return a.age - b.age;
+    });
+    
+    console.log(persons);
+    
+    // Sort by name
+    persons.sort(function(a, b) {
+        var x = a.name.toLowerCase(); // ignore upper and lowercase
+        var y = b.name.toLowerCase(); // ignore upper and lowercase
+        if(x < y) {
+            return -1;
+        }
+        if(x > y) {
+            return 1;
+        }
+        // names must be equal
+        return 0;
+    });
+    
+    // Loop through all the elements in the array 
+    for(var i in persons)  {  
+        // Loop through all the properties in the object  
+        for(var prop in persons[i]) {  
+            document.write(prop + ": " + persons[i][prop] + "<br>"); 
+        }
+        document.write("<hr>");
+    }
+    </script>
+</body>
+</html>
